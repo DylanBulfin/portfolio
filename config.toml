@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://dylanbulfin.com"
 
+# Put output in docs folder for GitHub pages support
+output_dir = "docs"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
