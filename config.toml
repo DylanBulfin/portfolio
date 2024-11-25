@@ -4,6 +4,8 @@ base_url = "https://dylanbulfin.com"
 # Put output in docs folder for GitHub pages support
 output_dir = "docs"
 
+theme = "anatole-zola"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -15,5 +17,17 @@ build_search_index = false
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
+[languages.en.translations]
+language_name = "English"
+about = "About"
+home = "Projects"
+tags = "Tags"
+archive = "Archive"
+links = "Links"
+date_format = "%Y-%m-%d"
+next_page = "Next Page"
+last_page = "Last Page"
+
 [extra]
 # Put all your custom variables here
+
