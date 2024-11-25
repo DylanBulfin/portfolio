@@ -69,11 +69,14 @@
   <div class="post-content"><p>This is a custom programming language (specifically a dialect of Lisp) I designed, as well
 as an interpreter I wrote for it.</p>
 <p><a href="https://github.com/DylanBulfin/blisp">(GitHub Link)</a></p>
-<p>[(YouTube Demo Video)]TODO</p>
+<p><a href="https://youtu.be/RFbHk7YyA7k">(YouTube Demo (Fibonacci))</a></p>
+<p><a href="https://youtu.be/3Ggrh42FM7c">(YouTube Demo (Collatz))</a></p>
+<p>See Example Programs section below for an explanation of each demo program.</p>
 <p>I designed it to be as simple as possible while still being usable (as compared to
 languages like Brainf*ck). The README in the GitHub repository has much more detail but
 I've added some notes about the language below as well:</p>
-<h2 id="example-program">Example Program</h2>
+<h2 id="demo-programs">Demo Programs</h2>
+<h3 id="fibonacci">Fibonacci</h3>
 <p>Below is a program which prints fibonacci numbers in order, with a half-second delay in
 between.</p>
 <pre><code>([
@@ -92,6 +95,45 @@ between.</p>
     (write n2)
 
     (sleep 500)
+  ])
+])
+</code></pre>
+<h3 id="collatz">Collatz</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz conjecture</a> states that if
+you apply the following rules to any positive integer repeatedly, you'll eventually reach
+1:</p>
+<ul>
+<li>If n is even, set <code>n = n / 2</code></li>
+<li>If n is odd, set <code>n = (3 * n) + 1</code></li>
+</ul>
+<p>The number of steps it takes an integer to reach <code>1</code> has been researched in-depth, and
+OEIS has the first 72 values <a href="https://oeis.org/A006577">on its site</a>. Below is a program
+that calculates and prints the values for each of the first 72 integers (I've verified
+that they match.). This file is also at <code>programs/collatz.bl</code></p>
+<pre><code>([
+  (init cnt uint)
+  (init tmp uint)
+  (def curr 1u)
+
+  (while (le curr 72) [
+    (set cnt 0u)
+    (set tmp curr)
+    
+    (while (ne tmp 1) [
+      (set cnt (+ cnt 1))
+      (if (eq tmp (* 2 (&#x2F; tmp 2)))
+        (set tmp (&#x2F; tmp 2))
+        (set tmp (+ 1 (* 3 tmp)))
+      )
+    ])
+
+    (write (concat &quot;Steps for &quot; (concat (tostring curr) &quot;: &quot;)))
+    (write cnt)
+    (write ())
+
+    (set curr (+ curr 1))
+
+    (sleep 100)
   ])
 ])
 </code></pre>
