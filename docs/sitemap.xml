@@ -10,6 +10,10 @@
         <loc>https://dylanbulfin.com/archive/</loc>
     </url>
     <url>
+        <loc>https://dylanbulfin.com/bignumbe-rs/</loc>
+        <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
         <loc>https://dylanbulfin.com/blisp/</loc>
         <lastmod>2024-11-08</lastmod>
     </url>
@@ -34,5 +38,9 @@
     <url>
         <loc>https://dylanbulfin.com/thunars/</loc>
         <lastmod>2024-08-11</lastmod>
+    </url>
+    <url>
+        <loc>https://dylanbulfin.com/vir/</loc>
+        <lastmod>2024-07-22</lastmod>
     </url>
 </urlset>
