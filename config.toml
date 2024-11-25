@@ -28,6 +28,10 @@ date_format = "%Y-%m-%d"
 next_page = "Next Page"
 last_page = "Last Page"
 
+[extra.social]
+github = "DylanBulfin"
+linkedin = "dylan-bulfin"
+
 [extra]
 # Put all your custom variables here
 
